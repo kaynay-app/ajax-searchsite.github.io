@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Ajax Realtime Search Results</title>
+  <script src="ajax.js"></script>
+  <style media="screen">
+      [readonly] {
+        background-color: silver;
+      }
+      .wide{
+        width: 100%
+      }
+      .high{
+        height:320px;
+      }
+  </style>
+</head>
+
+<body>
+  <label for="search">Search:</label>
+  <input type="text" id="search" onkeyup="retrieve_data(this.value);" />
+  <br />
+  <br />
+
+  <label for="name"> First match:</label>
+  <br />
+  <textarea id="name" class="wide" readonly></textarea>
+  <br />
+  <br />
+
+
+  <label for="url"> Webpage: </label>
+  <a id="url" target="_blank"></a>
+  <br />
+
+  <label for="raw-json"> Raw JSON: </label>
+  <br />
+  <textarea id="raw-json" readonly class="wide high"></textarea>
+  <br />
+  <br />
+
+
+
+
+
+</body>
+
+</html>
