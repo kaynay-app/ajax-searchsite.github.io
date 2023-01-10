@@ -10,12 +10,12 @@ function retrieve_data(str) {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
     json_elt.innerHTML = JSON.stringify(this.response, undefined, 2);
-    //tvmaze_callback(this, name_elt, url_elt);
-    brew_callback(this, name_elt, url_elt);
+    tvmaze_callback(this, name_elt, url_elt);
+    //brew_callback(this, name_elt, url_elt);
   }
   xhttp.responseType = "json";
-  //xhttp.open('GET', 'http://api.tvmaze.com/api/search/shows?q=' + str);
-  xhttp.open('GET', 'https://api.openbrewerydb.org/breweries/search?query=' + str);
+  xhttp.open('GET', 'http://api.tvmaze.com/api/search/shows?q=' + str);
+  //xhttp.open('GET', 'https://api.openbrewerydb.org/breweries/search?query=' + str);
   xhttp.send();
 }
 function brew_callback(message, name_elt, url_elt){
